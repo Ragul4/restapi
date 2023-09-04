@@ -1,6 +1,6 @@
 package com.skcet.content.model;
 
-import jakarta.annotation.Generated;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,19 +13,26 @@ import jakarta.persistence.Table;
 public class ContentModel {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int book_id;
+	private int id;
+	private String c_name;
 	@Column(name="book_name")
 	private String book_name;
 	private String author;
 	private String domain;
-	private String related_domain;
-	private String best_university_for_domain;
-	private String language;
+	private String university;
+	
 	public int getBook_id() {
-		return book_id;
+		return id;
 	}
 	public void setBook_id(int book_id) {
-		this.book_id = book_id;
+		this.id = book_id;
+	}
+	
+	public String getC_name() {
+		return c_name;
+	}
+	public void setC_name(String c_name) {
+		this.c_name = c_name;
 	}
 	public String getBook_name() {
 		return book_name;
@@ -45,23 +52,23 @@ public class ContentModel {
 	public void setDomain(String domain) {
 		this.domain = domain;
 	}
-	public String getRelated_domain() {
-		return related_domain;
+	
+	public String getUniversity() {
+		return university;
 	}
-	public void setRelated_domain(String related_domain) {
-		this.related_domain = related_domain;
+	public void setUniversity(String university) {
+		this.university = university;
 	}
-	public String getBest_university_for_domain() {
-		return best_university_for_domain;
+	@Override
+	public String toString() {
+		return "id=" + id + "c_name=" + c_name  + "book_name=" + book_name +
+				"author=" + author + "domain=" + domain + 
+				"university="+ university + "domain=" + domain;
 	}
-	public void setBest_university_for_domain(String best_university_for_domain) {
-		this.best_university_for_domain = best_university_for_domain;
-	}
-	public String getLanguage() {
-		return language;
-	}
-	public void setLanguage(String language) {
-		this.language = language;
+	
+	
+	public ContentModel() {
+		
 	}
 	
 }

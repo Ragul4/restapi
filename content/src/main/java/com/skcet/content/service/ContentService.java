@@ -1,68 +1,52 @@
 package com.skcet.content.service;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.skcet.content.model.ContentModel;
 import com.skcet.content.repository.ContentRepository;
 
 
 
+
+
 @Service
 public class ContentService {
 	@Autowired
-	ContentRepository cr;
+
+	ContentRepository stRepo;
 	
-	public ContentModel saveDetails(ContentModel cm) {
-		return cr.save(cm);
+	public ContentModel saveDetails(ContentModel  e)
+	{
+		return stRepo.save(e);
+	}
+	public List<ContentModel > getDetails()
+	{
+		return stRepo.findAll();
+	}
+	public ContentModel  updateDetails(ContentModel  e1)
+	{
+		return stRepo.saveAndFlush(e1);
+	}
+	public void deleteDetails(int Id)
+	{
+		stRepo.deleteById(Id);
 	}
 	
 	
-	public ContentModel updateDetails(ContentModel hm) {
-		return cr.saveAndFlush(hm);
+	public List<ContentModel> getSorted(String field) {
+		return stRepo.findAll(Sort.by(Sort.Direction.ASC,field));
 	}
 	
-	public boolean deleteContent(int hotelId) {
-		if(cr.existsById(hotelId)) {
-			cr.deleteById(hotelId);
-			return true;
-		}
-		return false;
+	public List<ContentModel> getWithPagination(@PathVariable int offset, @PathVariable int pageSize) {
+		Page<ContentModel> page =stRepo.findAll(PageRequest.of(offset, pageSize));
+		return page.getContent();
 	}
-	
-	
-	
-	public void delete4(int book_id) {
-		System.out.print("Deleted");
-		cr.deleteById(book_id);
-	}
-	
-	public Optional<ContentModel> getUserId(int userId)
-	   {
-		   Optional<ContentModel>book=cr.findById(userId);
-		   if(book.isPresent())
-		   {
-			   return book;
-		   }
-		   return null;
-	   }
-	
-	public void deleteUser(int book_id) {
-        cr.deleteById(book_id);
-    }
-	
-	public void deleteApp(int id)
-	  {
-	    System.out.println("Deleted");
-	    cr.deleteById(id);
-	  }
-	
-	public List<ContentModel> getDetails(){
-		return cr.findAll();
-	}
-	
+
 	
 }
