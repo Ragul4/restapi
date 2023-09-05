@@ -15,6 +15,7 @@ import com.skcet.content.repository.ContentRepository;
 
 
 
+
 @Service
 public class ContentService {
 	@Autowired
@@ -33,6 +34,8 @@ public class ContentService {
 	{
 		return stRepo.saveAndFlush(e1);
 	}
+	
+	
 	public void deleteDetails(int Id)
 	{
 		stRepo.deleteById(Id);

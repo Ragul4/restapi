@@ -3,8 +3,7 @@ package com.skcet.content.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -12,7 +11,6 @@ import jakarta.persistence.Table;
 @Table(name="Content_Model")
 public class ContentModel {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String c_name;
 	@Column(name="book_name")
@@ -21,11 +19,11 @@ public class ContentModel {
 	private String domain;
 	private String university;
 	
-	public int getBook_id() {
+	public int getId() {
 		return id;
 	}
-	public void setBook_id(int book_id) {
-		this.id = book_id;
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	public String getC_name() {
