@@ -20,7 +20,7 @@ class Get extends Component {
 
   render() {   
     return (
-        <div className="box2">
+        <div id="f" className="box2">
       <table border={1}>
       <thead>
         <tr>
@@ -47,13 +47,13 @@ class Get extends Component {
     </table>
 
     <button className="button1">
-        <Link to="/">Add Item</Link>
+        <Link to="/">Add</Link>
         </button>
         <button className="button2">
-        <Link to="/Put" >Update Item</Link>
+        <Link to="/Put" >Update</Link>
         </button>
         <button className="button3">
-        <Link to="/Delete">Delete Item</Link>
+        <Link to="/Delete">Delete</Link>
         </button>
     </div>
     );

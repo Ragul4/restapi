@@ -1,0 +1,72 @@
+body {
+    color: #b0c61f;
+}
+
+.auth-form-container {
+    text-align: center;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.auth-form-container,
+.login-form,
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    padding: 0.25rem 0;
+}
+
+/* Apply border styles to input fields */
+.input {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #e5e1ec;
+    border: 1px solid #008CBA;
+    border-radius: 5px;
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+}
+
+.link-btn {
+    background: none;
+    color: white;
+    text-decoration: underline;
+}
+
+/* Add a glowing text effect */
+#hh1 {
+    animation: move1 15s infinite alternate;
+}
+
+/* Define the moving animations */
+@keyframes move1 {
+    from {
+        transform: translate(-120px, 50px);
+    }
+    to {
+        transform: translate(120px, 50px);
+    }
+}
+
+.error-message {
+    color: red;
+}

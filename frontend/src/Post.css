@@ -53,7 +53,7 @@
   background-size: auto;
 }
 .button1{
-  background-color: aliceblue;
+  background-color: rgb(21, 108, 185);
   height:40px;
   width:100px;
   margin-left:60px;
@@ -75,4 +75,68 @@
   height:40px;
   width:100px;
   margin-left:70px;
+}
+/* Add a glowing text effect to .head */
+.head {
+  color: rgb(248, 234, 43);
+  font-style: italic;
+  animation: glow 2s infinite alternate; /* Apply the glow animation */
+}
+
+/* Define the glow animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(248, 234, 43, 0.8), 0 0 20px rgba(248, 234, 43, 0.8), 0 0 30px rgba(248, 234, 43, 0.8);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(248, 234, 43, 0.8), 0 0 30px rgba(248, 234, 43, 0.8), 0 0 40px rgba(248, 234, 43, 0.8);
+  }
+}
+
+/* Add moving text effects to #h1, #h2, and #h3 */
+#h1 {
+  transform: translate(-120px, 50px);
+  animation: move1 15s infinite alternate; /* Apply the move1 animation */
+}
+
+#h2 {
+  transform: translate(120px, 10px);
+  animation: move2 11s infinite alternate; /* Apply the move2 animation */
+}
+
+#h3 {
+  transform: translate(0px, -40px);
+  animation: move3 10s infinite alternate; /* Apply the move3 animation */
+}
+
+/* Define the moving animations */
+@keyframes move1 {
+  from {
+    transform: translate(-120px, 50px);
+  }
+  to {
+    transform: translate(120px, 50px);
+  }
+}
+
+@keyframes move2 {
+  from {
+    transform: translate(120px, 10px);
+  }
+  to {
+    transform: translate(-120px, 10px);
+  }
+}
+
+@keyframes move3 {
+  from {
+    transform: translate(0px, -40px);
+  }
+  to {
+    transform: translate(0px, 40px);
+  }
+}
+
+#f{
+  transform: translate(50px,250px);
 }

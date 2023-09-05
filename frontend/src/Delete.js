@@ -32,15 +32,15 @@ class Delete extends Component {
         /><br/><br/>
 
         <button className="button1" type="submit">
-          Delete Record
+          Delete
         </button><br/><br/><button className="button1">
-      <Link  to="/" >Add Item</Link>
+      <Link  to="/" >Add</Link>
       </button>
       <button className="button2">
-        <Link  to="/Put" >Update Item</Link>
+        <Link  to="/Put" >Update</Link>
       </button>
       <button className="button3">
-        <Link  to="/Get" >See All Items</Link>
+        <Link  to="/Get" >See All</Link>
       </button>
       </form></body>
     );

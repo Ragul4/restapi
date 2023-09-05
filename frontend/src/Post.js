@@ -56,7 +56,7 @@ class Post extends Component {
   render() {
     return (
       <><body>
-        <h1 className="head">Create the course details</h1>
+        <h1 className="head">Create the content details</h1>
       <form onSubmit={this.handleSubmit} className="sign-form">
         <label className="sign-label">Id</label>
         <input
@@ -112,13 +112,13 @@ class Post extends Component {
       </form>
       
 <button className='button1'>
-        <Link  to="/Put" >Update Item</Link>
+        <Link  to="/Put" >Update</Link>
       </button >
       <button className='button2'>
-        <Link  to="/Get">See All Items</Link>
+        <Link  to="/Get">See All</Link>
       </button>
       <button className='button3'>
-        <Link  to="/Delete">Delete Item</Link>
+        <Link  to="/Delete">Delete</Link>
       </button>
       </body></>
     );

@@ -56,7 +56,7 @@ class Put extends Component {
     return (
       <body>
       <form onSubmit={this.handleSubmit} className="sign-form">
-      <h1 className="head">Update the course details</h1>
+      <h1 className="head">Update the content details</h1>
       
       <label className="sign-label">Id</label>
       <input
@@ -107,14 +107,15 @@ class Put extends Component {
       />
         <button className="login-button" type="submit">
          Update
-        </button><button className='button3'>
-        <Link  to="/" >Add Item</Link>
+        </button>
+        <button  id="h1"className='button3'>
+        <Link  to="/" >Add</Link>
       </button>
-      <button className='button2'>
-        <Link  to="/Get" >See All Items</Link>
+      <button id="h2" className='button2'>
+        <Link  to="/Get" >See All</Link>
       </button>
-      <button className='button1'>
-        <Link  to="/Delete" >Delete Item</Link>
+      <button id="h3" className='button1'>
+        <Link  to="/Delete" >Delete</Link>
       </button>
       </form></body>
     );
